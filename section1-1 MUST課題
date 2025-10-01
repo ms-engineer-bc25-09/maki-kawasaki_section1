@@ -1,0 +1,52 @@
+//例
+function sum(x: number, y: number): number {
+  return x + y;
+}
+const a: number = 10;
+const b: number = 20;
+console.log(sum(a, b));
+
+
+//MUST1-1
+const length: number = Math.floor(Math.random() * 11) + 10;
+const randomNumbers: number[] = Array.from({ length }, () => Math.floor(Math.random() * 100));
+console.log(randomNumbers);
+
+
+//MUST1-2
+function getMaxValue(numbers:number[]):number{
+  return Math.max(...numbers);
+}
+console.log(getMaxValue([3,8,1,20,5]));
+
+
+//MUST2 
+const fizzbuzz = (x: number): string | number => {
+    if (x % 15 === 0) {
+          return "fizzbuzz";
+    } else if (x % 5 === 0) {
+          return "buzz";
+    } else if (x % 3 === 0) {
+          return "fizz";
+    } else {
+          return x;
+    }
+};
+
+for(let i = 1 ; i <= 100 ; i++){
+  console.log(fizzbuzz(i));
+}
+
+
+//MUST 3
+function reverseString(str: string): string{
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("baseball"));
+
+
+//MUST 4
+function splitText(text:string,delimiter:string):string[] {
+  return text.split(delimiter);
+}
+console.log(splitText("apple,orange,strawberry",","));
