@@ -1,0 +1,19 @@
+【 1-5 ワーク1　シェルスクリプト練習問題 】
+
+●1-1 show_datetaime.sh
+#!/bin/bash
+date
+
+●1-2 oddevennum.sh
+#!/bin/bash
+read -p "数値を入力してください:" num
+if ! [[ "$num" =~ ^-?[0-9]+$ ]]; then
+ echo "エラー: 数値を入力してください。"
+ exit 1
+fi
+
+if(( num % 2 == 0));then
+ echo "$num は偶数です。"
+else
+ echo "$num は奇数です。"
+fi
